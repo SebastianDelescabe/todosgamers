@@ -1,0 +1,10 @@
+
+.header__mobile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.header__mobile-options {
+    display: flex;
+    gap: 1rem;
+}
