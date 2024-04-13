@@ -18,6 +18,7 @@ footer#footer__mobile {
     justify-content: center;
     width: 120px;
     height: 56px;
+    cursor: pointer;
 }
 .footer__mobile-item span{
     color: white;

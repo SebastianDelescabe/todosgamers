@@ -1,3 +1,6 @@
+header#header__mobile svg {
+    cursor: pointer;
+}
 .header__mobile-container {
     display: flex;
     justify-content: space-between;
