@@ -1,0 +1,23 @@
+#happyalert{
+    background-color: #FEEBCB;
+}
+.happyalert__container {
+    border-left: 4px solid #DD6B20;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px 12px 16px;
+    gap: 12px;
+}
+.happyalert__text-content {
+    padding: 12px, 16px, 12px, 16px;
+    gap:12px
+}
+.happyalert__text-content  > span{
+    font-weight: 700;
+    font-size: 16px;
+}
+.happyalert__text-content  > p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}

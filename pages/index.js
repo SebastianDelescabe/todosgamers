@@ -1,8 +1,21 @@
 import React from "react"
+import HappyAlert from "../components/home/HappyAlert"
+import BreweryCard from "../components/home/BreweryCard"
 
 export default function Home() {
   return (
-    <div >
-    </div>
+    <section id="home">
+      <HappyAlert/>
+      <h1 className="home__title">Todas las opciones</h1>
+      <div className="home__options">
+        <BreweryCard/>
+        <BreweryCard/>
+      </div>
+      <h1 className="home__title">Opciones en California</h1>
+      <div className="home__options">
+        <BreweryCard/>
+        <BreweryCard/>
+      </div>
+    </section>
   )
 }

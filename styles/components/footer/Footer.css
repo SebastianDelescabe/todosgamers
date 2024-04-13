@@ -1,0 +1,31 @@
+footer#footer__mobile {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #010316;
+}
+.footer__mobile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__mobile-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 56px;
+}
+.footer__mobile-item span{
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+.footer__mobile-item:nth-child(2) span{
+    color: #3540E8;
+}

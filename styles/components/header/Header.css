@@ -1,10 +1,9 @@
-
 .header__mobile-container {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 16px;
 }
 .header__mobile-options {
     display: flex;
-    gap: 1rem;
+    gap: 16px
 }
