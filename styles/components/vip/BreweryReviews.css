@@ -1,0 +1,58 @@
+#breweryreviews{
+    padding: 20px 0px 12px 0px;
+    color: #eeeeee;
+}
+.breweryreviews__container{
+    height: 86.94px;
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.breweryreviews__user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38.47px;
+}
+.breweryreviews__user-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 80.47px;
+    height: 38.47px;;
+
+}
+.breweryreviews__user-info span{
+    font-weight: 600;
+    size: 16px;
+    line-height: 23.08px;
+    letter-spacing: 0.15px;
+    height: 24px;
+}
+.breweryreviews__user-info img{
+    height: 38.5px;
+    width: 38.5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.breweryreviews__user-answer{
+    color: #E41AD6;
+    letter-spacing: 0.4px;
+    line-height: 15.39px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.breweryreviews__comment{
+    height: 38.47px;
+}
+.breweryreviews__comment span{
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    display: block;
+    text-align: justify;
+}

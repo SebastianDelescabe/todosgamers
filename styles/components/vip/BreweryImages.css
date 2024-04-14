@@ -1,0 +1,13 @@
+#breweryimages{
+    padding: 20px 0 12px 0px;
+}
+.breweryimages__container {
+    display: flex;
+    overflow: auto;
+    gap: 0.5rem;
+}
+.breweryimages__container img{
+    width: 156px;
+    height: 104px;
+    border-radius: 8px ;
+}

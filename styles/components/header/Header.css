@@ -4,7 +4,8 @@ header#header__mobile svg {
 .header__mobile-container {
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    height: 56px;
+    align-items: center;
 }
 .header__mobile-options {
     display: flex;

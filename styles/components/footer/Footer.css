@@ -1,9 +1,10 @@
 footer#footer__mobile {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: 20px 0px;
     position: fixed;
     bottom: 0;
+    left: 0;
     background-color: #010316;
 }
 .footer__mobile-container {

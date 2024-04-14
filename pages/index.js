@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <section id="home">
       <HappyAlert/>
-      <h1 className="home__title">Todas las opciones</h1>
+      <h1 className="app__title">Todas las opciones</h1>
       <div className="home__options">
         <BreweryCard/>
         <BreweryCard/>
       </div>
-      <h1 className="home__title">Opciones en California</h1>
+      <h1 className="app__title">Opciones en California</h1>
       <div className="home__options">
         <BreweryCard/>
         <BreweryCard/>
