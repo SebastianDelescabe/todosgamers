@@ -1,9 +1,10 @@
 import React from "react"
 
-export default function HomeIcon() {
+export default function HomeIcon({data}) {
+
   return (
-    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.5 21V9L12.5 3L20.5 9V21H14.5V14H10.5V21H4.5Z" fill="#3540E8"/>
+    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path style={data ? {fill:'#3540E8'}: {fill:'white'}} d="M0.5 18.7058V6.70581L8.5 0.705811L16.5 6.70581V18.7058H10.5V11.7058H6.5V18.7058H0.5Z" fill="white"/>
     </svg>
   )
 }

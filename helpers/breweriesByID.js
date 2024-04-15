@@ -1,11 +1,12 @@
-export async function fetchBrewerys(){
-    try {
-        const url = `https://api.openbrewerydb.org/v1/breweries`
-    
-        const response = await fetch(url)
-        const brewerysApiInfo = await response.json()
+export async function breweriesByID(id){
 
-        const breweryAppData = brewerysApiInfo.map(brewery => {
+    const url = `https://api.openbrewerydb.org/v1/breweries?by_ids=${id}`
+
+    try {
+        const response = await fetch(url)
+        const breweryApiData = await response.json()
+    
+        const breweryData = breweryApiData.map(brewery => {
             return{
                 breweryID: brewery.id,
                 breweryName: brewery.name,
@@ -14,9 +15,9 @@ export async function fetchBrewerys(){
             }
         })
 
-        return breweryAppData.slice(0,10)
+        return breweryData;
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }

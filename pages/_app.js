@@ -14,7 +14,6 @@ import '../styles/components/vip/BreweryReviews.css'
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 
-
 function MyApp({ Component, pageProps }) {  
   return (
     <div className='container'>

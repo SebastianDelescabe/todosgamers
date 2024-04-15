@@ -1,36 +1,63 @@
 import React, { useEffect, useState } from "react"
 import HappyAlert from "../components/home/HappyAlert"
 import BreweryCard from "../components/home/BreweryCard"
-import { fetchBrewerys } from "../helpers/fetchBrewerys"
+import { fetchBreweries } from "../helpers/fetchBreweries"
+import { breweriesByState } from "../helpers/breweriesByState"
 
 export default function Home() {
 
-  const [brewerys, setbrewerys] = useState([])
+  const [breweries, setBreweries] = useState(false)
+  const [filteredBreweries,setFilteredBreweries] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  const filterStateName = 'California'
 
   useEffect(() => {
-    if(brewerys.length <= 0){
-      fetchBrewerys()
+    if(!breweries){
+      fetchBreweries()
       .then(response => {
-        setbrewerys(response)
+        setBreweries(response)
       })
     }
-  }, [brewerys])
+  }, [breweries])
+  
+  useEffect(() => {
+    if(!filteredBreweries && breweries){
+      breweriesByState(filterStateName)
+      .then(response => {
+        setFilteredBreweries(response)
+        setLoading(false)
+      })
+    }
+  }, [breweries])
 
-  return (
-    <section id="home">
-      <HappyAlert/>
-      <h1 className="app__title">Todas las opciones</h1>
-      <div className="home__options">
-        {
-          brewerys && brewerys.map(brewery => (
-            <BreweryCard key={brewery.breweryID} data={brewery}/>
-          ))
-      }
+  if(loading){
+    return (
+      <div className="loader">
+        <div class="lds-dual-ring"></div>
       </div>
-      <h1 className="app__title" id='filterName'>Opciones en California</h1>
-      <div className="home__options">
-        <BreweryCard data={brewerys}/>
-      </div>
-    </section>
-  )
+    )
+  }else{
+    return (
+      <section id="home">
+        <HappyAlert/>
+        <h1 className="app__title">Todas las opciones</h1>
+        <div className="home__options">
+          {
+            breweries && breweries.map(brewery => (
+              <BreweryCard key={brewery.breweryID} data={brewery}/>
+            ))
+          }
+        </div>
+        <h1 className="app__title">Opciones en {filterStateName}</h1>
+        <div className="home__options">
+          {
+            filteredBreweries && filteredBreweries.map(brewery => (
+              <BreweryCard key={brewery.breweryID} data={brewery}/>
+            ))
+          }
+        </div>
+      </section>
+    )
+  }
 }

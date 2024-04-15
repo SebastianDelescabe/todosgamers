@@ -12,11 +12,21 @@ export default function LocationAndPhone({data}){
             <div className="locationandphone-text">
                 <div className="locationandphone-text__item">
                     <LocationIcon/>
-                    <span>{maxCaracter(breweryAdress,28)}</span>
+                    {
+                        breweryAdress ?
+                        <span>{maxCaracter(breweryAdress,28)}</span>
+                        : 
+                        <span>No se encontró ubicación</span>
+                    }
                 </div>
                 <div className="locationandphone-text__item">
                     <PhoneIcon/>
-                    <span>{breweryPhone}</span>
+                    {
+                        breweryAdress ?
+                        <span>{breweryPhone}</span>
+                        : 
+                        <span>No se encontró teléfono</span>
+                    }
                 </div>
             </div>
         </div>

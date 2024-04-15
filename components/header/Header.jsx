@@ -7,10 +7,14 @@ import Link from 'next/link';
 
 export default function Header() {
 
-  const [windoPath, setwindoPath] = useState('/')
+  const [home, setHome] = useState(true)
 
   useEffect(() => {
-    setwindoPath(window.location.pathname);
+    if(window.location.pathname === '/'){
+      setHome(true)
+    }else{
+      setHome(false)
+    }
   })
 
   return (
@@ -18,7 +22,7 @@ export default function Header() {
         <div className="header__mobile-container">
             <div className="header__mobile-menu">
               {
-                windoPath === '/' ?  <MenuIcon/> : 
+                home ? <MenuIcon/> : 
                 <Link href='/'>
                   <ArrowLeft/>
                 </Link>
