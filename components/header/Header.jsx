@@ -13,8 +13,6 @@ export default function Header() {
     setwindoPath(window.location.pathname);
   })
 
-  console.log(windoPath);
-  
   return (
     <header id="header__mobile">
         <div className="header__mobile-container">

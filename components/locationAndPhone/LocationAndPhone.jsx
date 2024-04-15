@@ -1,24 +1,22 @@
 import React from "react";
 import LocationIcon from '../svg/LocationIcon'
 import PhoneIcon from '../svg/PhoneIcon'
+import { maxCaracter } from "../../helpers/maxCaracter";
 
-export default function LocationAndPhone(){
+export default function LocationAndPhone({data}){
 
-    let location = 'Havre 73, Juárez, Cuauhtémoc'
+    const { breweryAdress , breweryPhone } = data
 
-    if(location.length > 28){
-       location = `${location.slice(0,28)}...`
-    }
     return(
         <div id="locationandphone">
             <div className="locationandphone-text">
                 <div className="locationandphone-text__item">
                     <LocationIcon/>
-                    <span>{location}</span>
+                    <span>{maxCaracter(breweryAdress,28)}</span>
                 </div>
                 <div className="locationandphone-text__item">
                     <PhoneIcon/>
-                    <span>4235-8766</span>
+                    <span>{breweryPhone}</span>
                 </div>
             </div>
         </div>
