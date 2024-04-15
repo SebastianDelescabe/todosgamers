@@ -15,9 +15,12 @@ export default function Vip() {
 
   useEffect(() => {
     if (!breweryInfo) {
-      breweriesByID(id).then((response) => {
+      breweriesByID(id)
+      .then((response) => {
         setbreweryData(response[0]);
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 300);
       });
     }
   }, [id]);

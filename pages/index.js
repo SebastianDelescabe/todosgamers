@@ -26,7 +26,9 @@ export default function Home() {
       breweriesByState(filterStateName)
       .then(response => {
         setFilteredBreweries(response)
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 300);
       })
     }
   }, [breweries])
