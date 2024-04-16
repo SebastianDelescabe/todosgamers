@@ -1,3 +1,9 @@
 .vip__info-container{
-    aspect-ratio: 16 / 13.5;
+    aspect-ratio: 16 / 3.5;
+}
+
+@media (max-width:767px){
+    .vip__info-container{
+        aspect-ratio: 16 / 13.5;
+    }
 }

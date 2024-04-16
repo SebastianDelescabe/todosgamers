@@ -28,7 +28,7 @@ export default function Vip() {
   if (loading) {
     return (
       <div className="loader">
-        <div class="lds-dual-ring"></div>
+        <div className="lds-dual-ring"></div>
       </div>
     )
   } else {
