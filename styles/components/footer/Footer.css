@@ -20,6 +20,10 @@ footer#footer__mobile {
     width: 120px;
     height: 56px;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+.footer__mobile-item svg path{
+    transition: all 0.5s ease;
 }
 .footer__mobile-item span{
     color: white;
@@ -27,7 +31,14 @@ footer#footer__mobile {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
+    transition: all 0.5s ease;
 }
-/* .footer__mobile-item:nth-child(2) span{
+.footer__mobile-item.home__active {
+    transform: scale(1.15);
+}
+.footer__mobile-item.home__active  svg path{
+    fill: #3540E8;
+}
+.footer__mobile-item.home__active  span{
     color: #3540E8;
-} */
+}

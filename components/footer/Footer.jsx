@@ -24,9 +24,9 @@ export default function Footer() {
             <span>Calendario</span>
           </div>
           <Link href='/'>
-            <div className="footer__mobile-item">
-              <HomeIcon data={home}/>
-                <span style={home ? {color:'#3540E8'}: {color:'white'}}>Inicio</span>
+            <div className={home ? "footer__mobile-item home__active" : "footer__mobile-item"}>
+              <HomeIcon className=''/>
+                <span>Inicio</span>
             </div>
           </Link>
           <div className="footer__mobile-item">
