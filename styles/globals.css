@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -16,7 +17,7 @@ a {
   box-sizing: border-box;
 }
 
-p{
+p {
   margin: 0rem;
   padding: 0rem;
 }
@@ -42,10 +43,10 @@ h1, h2 , h3 , h4 , h5 {
   display: inline-block;
 }
 
-/* FADE IN */
 main#app {
   padding-bottom: 7rem;
 }
+/* FADE IN */
 section#home,section#vip{
   animation: fadeIn 0.5s ease;
 }
@@ -58,6 +59,7 @@ section#home,section#vip{
     opacity: 1;
   }
 }
+
 /* ------- LOADER CSS ----- */
 .loader {
   width: 100vw;

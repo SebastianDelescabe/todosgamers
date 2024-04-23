@@ -10,14 +10,14 @@ export default function Vip() {
   const router = useRouter();
   const { id } = router.query;
 
-  const [breweryInfo, setbreweryData] = useState(false);
+  const [breweryInfo, setBreweryInfo] = useState(false);
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!breweryInfo) {
       breweriesByID(id)
       .then((response) => {
-        setbreweryData(response[0]);
+        setBreweryInfo(response[0]);
         setTimeout(() => {
           setLoading(false)
         }, 300);

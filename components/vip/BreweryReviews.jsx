@@ -4,6 +4,7 @@ import { maxCaracter } from "../../helpers/maxCaracter";
 export default function BreweryReviews({data}){
 
     const {name, photo, review } = data
+    
     return(
         <div id="breweryreviews">
             <div className="breweryreviews__container">

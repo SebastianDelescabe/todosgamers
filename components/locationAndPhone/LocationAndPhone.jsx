@@ -22,7 +22,7 @@ export default function LocationAndPhone({data}){
                 <div className="locationandphone-text__item">
                     <PhoneIcon/>
                     {
-                        breweryAdress ?
+                        breweryPhone ?
                         <span>{breweryPhone}</span>
                         : 
                         <span>No se encontró teléfono</span>
