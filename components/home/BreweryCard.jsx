@@ -19,7 +19,7 @@ export default function BreweryCard({data}){
                     </div>
                     <LocationAndPhone data={{breweryAdress,breweryPhone}}/>
                 </div>
-                <Link href={`vip/${breweryID}`} className="breweryCard__see-more" >Ver más</Link>
+                <Link href={`vip/${breweryID}`} className="breweryCard__see-more">Ver más</Link>
             </div>
         </div>
     )

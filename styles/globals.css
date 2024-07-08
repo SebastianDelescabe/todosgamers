@@ -102,3 +102,12 @@ section#home,section#vip{
   }
 }
 
+
+#status{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  color: white;
+}
